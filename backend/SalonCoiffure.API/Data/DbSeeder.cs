@@ -67,6 +67,43 @@ public static class DbSeeder
                 Price = 120m,
                 Category = "Événement",
                 Features = new List<string> { "Consultation", "Essai", "Coiffure finale" }
+            },
+            // Barber Shop Services
+            new Service
+            {
+                Name = "Barber Shop - Coupe Classique",
+                Description = "Coupe traditionnelle de barbier avec rasage à la lame pour une finition parfaite.",
+                Icon = "🪒",
+                Price = 35m,
+                Category = "Barber",
+                Features = new List<string> { "Consultation style", "Coupe précise", "Rasage nuque", "Soins après rasage" }
+            },
+            new Service
+            {
+                Name = "Barber Shop - Coupe + Barbe",
+                Description = "Service complet barbier : coupe cheveux et entretien de la barbe.",
+                Icon = "🪒",
+                Price = 55m,
+                Category = "Barber",
+                Features = new List<string> { "Coupe cheveux", "Taille barbe", "Contour barbe", "Huile à barbe" }
+            },
+            new Service
+            {
+                Name = "Barber Shop - Rasage Traditionnel",
+                Description = "Rasage complet à la lame chaude avec serviette chaude et soins premium.",
+                Icon = "🪒",
+                Price = 40m,
+                Category = "Barber",
+                Features = new List<string> { "Préparation peau", "Rasage à la lame", "Serviette chaude", "Baume apaisant" }
+            },
+            new Service
+            {
+                Name = "Barber Shop - Soins Barbe",
+                Description = "Entretien complet de la barbe avec produits professionnels.",
+                Icon = "🪒",
+                Price = 25m,
+                Category = "Barber",
+                Features = new List<string> { "Nettoyage", "Taille", "Contour", "Huile nourrissante" }
             }
         };
 
