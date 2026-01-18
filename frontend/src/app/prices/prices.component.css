@@ -1,0 +1,13 @@
+/* Prices component specific styles */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Prices styles are already included in the global styles.css file */
