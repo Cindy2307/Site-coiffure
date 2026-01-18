@@ -66,6 +66,42 @@ export class HomeComponent implements OnInit {
           },
           {
             id: 3,
+            name: "Barber Shop - Coupe Classique",
+            description: "Coupe traditionnelle de barbier avec rasage à la lame pour une finition parfaite.",
+            icon: "🪒",
+            price: 35,
+            features: ["Consultation style", "Coupe précise", "Rasage nuque", "Soins après rasage"],
+            category: "Barber"
+          },
+          {
+            id: 4,
+            name: "Barber Shop - Coupe + Barbe",
+            description: "Service complet barbier : coupe cheveux et entretien de la barbe.",
+            icon: "🪒",
+            price: 55,
+            features: ["Coupe cheveux", "Taille barbe", "Contour barbe", "Huile à barbe"],
+            category: "Barber"
+          },
+          {
+            id: 5,
+            name: "Barber Shop - Rasage Traditionnel",
+            description: "Rasage complet à la lame chaude avec serviette chaude et soins premium.",
+            icon: "🪒",
+            price: 40,
+            features: ["Préparation peau", "Rasage à la lame", "Serviette chaude", "Baume apaisant"],
+            category: "Barber"
+          },
+          {
+            id: 6,
+            name: "Barber Shop - Soins Barbe",
+            description: "Entretien complet de la barbe avec produits professionnels.",
+            icon: "🪒",
+            price: 25,
+            features: ["Nettoyage", "Taille", "Contour", "Huile nourrissante"],
+            category: "Barber"
+          },
+          {
+            id: 7,
             name: "Coloration",
             description: "Colorations personnalisées, balayages et mèches pour sublimer votre chevelure.",
             icon: "🎨",
@@ -74,7 +110,7 @@ export class HomeComponent implements OnInit {
             category: "Coloration"
           },
           {
-            id: 4,
+            id: 8,
             name: "Balayage",
             description: "Mèches personnalisées pour un effet naturel et lumineux.",
             icon: "🎨",
@@ -83,7 +119,7 @@ export class HomeComponent implements OnInit {
             category: "Coloration"
           },
           {
-            id: 5,
+            id: 9,
             name: "Soins Capillaires",
             description: "Soins profonds pour nourrir, réparer et protéger la santé de vos cheveux.",
             icon: "💆‍♀️",
@@ -92,7 +128,7 @@ export class HomeComponent implements OnInit {
             category: "Soins"
           },
           {
-            id: 6,
+            id: 10,
             name: "Coiffure Événementielle",
             description: "Coiffures sophistiquées pour mariages, soirées et occasions spéciales.",
             icon: "👰",
