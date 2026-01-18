@@ -17,11 +17,27 @@
       <p>Chargement des services...</p>
     </div>
     
-    <div *ngIf="!loading && services.length > 0" class="services-grid">
-      <div *ngFor="let service of services" class="service-card">
-        <div class="service-icon">{{ service.icon }}</div>
-        <h3>{{ service.name }}</h3>
-        <p>{{ service.description }}</p>
+    <div *ngIf="!loading && services.length > 0">
+      <!-- Services Femmes -->
+      <div class="service-category">
+        <div class="services-grid">
+          <div *ngFor="let service of getWomenServices()" class="service-card">
+            <div class="service-icon">{{ service.icon }}</div>
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Services Hommes -->
+      <div class="service-category">
+        <div class="services-grid">
+          <div *ngFor="let service of getMenServices()" class="service-card">
+            <div class="service-icon">{{ service.icon }}</div>
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
