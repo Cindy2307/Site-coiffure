@@ -1,0 +1,106 @@
+<!-- Hero Section -->
+<section id="accueil" class="hero">
+  <div class="hero-content">
+    <h2>Révélez votre beauté naturelle</h2>
+    <p>Expertise artisanale au service de votre style unique</p>
+    <button (click)="scrollToSection('contact')" class="cta-button">Prendre rendez-vous</button>
+  </div>
+  <div class="hero-image"></div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Nos Services</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Chargement des services...</p>
+    </div>
+    
+    <div *ngIf="!loading && services.length > 0" class="services-grid">
+      <div *ngFor="let service of services" class="service-card">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="galerie" class="gallery">
+  <div class="container">
+    <h2 class="section-title">Notre Galerie</h2>
+    <div class="gallery-grid">
+      <div *ngFor="let image of galleryImages" class="gallery-item">
+        <img [src]="image" [alt]="'Coiffure professionnelle'" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prices Section -->
+<section id="tarifs" class="prices">
+  <div class="container">
+    <h2 class="section-title">Nos Tarifs</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Chargement des tarifs...</p>
+    </div>
+    
+    <div *ngIf="!loading && services.length > 0" class="price-grid">
+      <div *ngFor="let service of services" class="price-card">
+        <h3>{{ service.name }}</h3>
+        <div class="price">{{ service.price }}€</div>
+        <ul>
+          <li *ngFor="let feature of service.features">{{ feature }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contact & Rendez-vous</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Nos Coordonnées</h3>
+        <div class="info-item">
+          <strong>Adresse:</strong><br>
+          123 Rue de la Beauté<br>
+          75001 Paris
+        </div>
+        <div class="info-item">
+          <strong>Téléphone:</strong><br>
+          01 23 45 67 89
+        </div>
+        <div class="info-item">
+          <strong>Horaires:</strong><br>
+          Mardi - Samedi: 9h-19h<br>
+          Dimanche: 9h-13h<br>
+          Lundi: Fermé
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Prendre Rendez-vous</h3>
+        <form>
+          <input type="text" placeholder="Votre nom" required>
+          <input type="email" placeholder="Votre email" required>
+          <input type="tel" placeholder="Votre téléphone" required>
+          <select required>
+            <option value="">Choisir un service</option>
+            <ng-container *ngIf="!loading && services.length > 0">
+              <option *ngFor="let service of services" [value]="service.name">
+                {{ service.name }}
+              </option>
+            </ng-container>
+          </select>
+          <textarea placeholder="Message optionnel" rows="4"></textarea>
+          <button type="submit" class="submit-btn">Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

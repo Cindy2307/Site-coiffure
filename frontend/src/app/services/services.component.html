@@ -1,0 +1,21 @@
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Nos Services</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Chargement des services...</p>
+    </div>
+    
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+    
+    <div *ngIf="!loading && !error" class="services-grid">
+      <div *ngFor="let service of services" class="service-card">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

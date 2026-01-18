@@ -1,0 +1,23 @@
+<section id="tarifs" class="prices">
+  <div class="container">
+    <h2 class="section-title">Nos Tarifs</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Chargement des tarifs...</p>
+    </div>
+    
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+    
+    <div *ngIf="!loading && !error" class="price-grid">
+      <div *ngFor="let service of services" class="price-card">
+        <h3>{{ service.name }}</h3>
+        <div class="price">{{ service.price }}€</div>
+        <ul>
+          <li *ngFor="let feature of service.features">{{ feature }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
