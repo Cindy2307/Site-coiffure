@@ -1,11 +1,11 @@
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  padding: 0 20px;
-  margin-top: 80px;
+  padding: 6rem 20px;
+  gap: 5rem;
 }
 
 .hero-content {
@@ -50,11 +50,11 @@
 
 .hero-image {
   flex: 1;
-  height: 500px;
+  height: 420px;
   background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=800&fit=crop&sat=-100&auto=format&ixlib=rb-4.0.3&q=85') center/cover;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  min-height: 400px;
+  min-height: 320px;
 }
 
 /* Services Section */
