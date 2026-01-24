@@ -21,7 +21,7 @@ public static class DbSeeder
                 Icon = "✂️",
                 Price = 45m,
                 Category = "Coupe",
-                Features = new List<string> { "Shampooing", "Coupe au bol", "Brushing" }
+                Features = new List<string> { "Shampooing", "Coupe", "Brushing" }
             },
             new Service
             {
@@ -76,12 +76,12 @@ public static class DbSeeder
                 Icon = "🪒",
                 Price = 35m,
                 Category = "Barber",
-                Features = new List<string> { "Consultation style", "Coupe précise", "Rasage nuque", "Soins après rasage" }
+                Features = new List<string> { "Coupe précise", "Rasage nuque", "Soins après rasage" }
             },
             new Service
             {
                 Name = "Barber Shop - Coupe + Barbe",
-                Description = "Service complet barbier : coupe cheveux et entretien de la barbe.",
+                Description = "Service complet barbier : coupe de cheveux et entretien de la barbe.",
                 Icon = "🪒",
                 Price = 55m,
                 Category = "Barber",

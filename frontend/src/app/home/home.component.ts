@@ -16,12 +16,13 @@ export class HomeComponent implements OnInit {
   loading = true;
 
   galleryImages = [
-    'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1562322145-93f6ab6b7b9b?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1562322145-93f6ab6b7b9b?w=400&h=300&fit=crop'
+    // Images locales du dossier coiffure
+    '/assets/pexels-enginakyurt-3065096.jpg', // Coiffure homme
+    '/assets/pexels-anthonyshkraba-production-8973500.jpg',
+    '/assets/pexels-cottonbro-3998413.jpg',
+    '/assets/pexels-maksgelatin-4422102.jpg', // Image avec cheveux violets
+    '/assets/pexels-orione-conceicao-1531154-3014937.jpg',
+    '/assets/pexels-ralph-rabago-3290886.jpg' // Nouvelle image ajoutée
   ];
 
   constructor(
@@ -52,56 +53,11 @@ export class HomeComponent implements OnInit {
             description: "Coupes modernes et classiques adaptées à votre morphologie et votre style de vie.",
             icon: "✂️",
             price: 45,
-            features: ["Shampooing", "Coupe au bol", "Brushing"],
+            features: ["Shampooing", "Coupe", "Brushing"],
             category: "Coupe"
           },
           {
             id: 2,
-            name: "Coupe Homme",
-            description: "Coupes précises et modernes pour hommes avec finition soignée.",
-            icon: "✂️",
-            price: 30,
-            features: ["Shampooing", "Coupe précise", "Finition"],
-            category: "Coupe"
-          },
-          {
-            id: 3,
-            name: "Barber Shop - Coupe Classique",
-            description: "Coupe traditionnelle de barbier avec rasage à la lame pour une finition parfaite.",
-            icon: "🪒",
-            price: 35,
-            features: ["Consultation style", "Coupe précise", "Rasage nuque", "Soins après rasage"],
-            category: "Barber"
-          },
-          {
-            id: 4,
-            name: "Barber Shop - Coupe + Barbe",
-            description: "Service complet barbier : coupe cheveux et entretien de la barbe.",
-            icon: "🪒",
-            price: 55,
-            features: ["Coupe cheveux", "Taille barbe", "Contour barbe", "Huile à barbe"],
-            category: "Barber"
-          },
-          {
-            id: 5,
-            name: "Barber Shop - Rasage Traditionnel",
-            description: "Rasage complet à la lame chaude avec serviette chaude et soins premium.",
-            icon: "🪒",
-            price: 40,
-            features: ["Préparation peau", "Rasage à la lame", "Serviette chaude", "Baume apaisant"],
-            category: "Barber"
-          },
-          {
-            id: 6,
-            name: "Barber Shop - Soins Barbe",
-            description: "Entretien complet de la barbe avec produits professionnels.",
-            icon: "🪒",
-            price: 25,
-            features: ["Nettoyage", "Taille", "Contour", "Huile nourrissante"],
-            category: "Barber"
-          },
-          {
-            id: 7,
             name: "Coloration",
             description: "Colorations personnalisées, balayages et mèches pour sublimer votre chevelure.",
             icon: "🎨",
@@ -110,7 +66,7 @@ export class HomeComponent implements OnInit {
             category: "Coloration"
           },
           {
-            id: 8,
+            id: 3,
             name: "Balayage",
             description: "Mèches personnalisées pour un effet naturel et lumineux.",
             icon: "🎨",
@@ -119,7 +75,7 @@ export class HomeComponent implements OnInit {
             category: "Coloration"
           },
           {
-            id: 9,
+            id: 4,
             name: "Soins Capillaires",
             description: "Soins profonds pour nourrir, réparer et protéger la santé de vos cheveux.",
             icon: "💆‍♀️",
@@ -128,13 +84,58 @@ export class HomeComponent implements OnInit {
             category: "Soins"
           },
           {
-            id: 10,
+            id: 5,
             name: "Coiffure Événementielle",
             description: "Coiffures sophistiquées pour mariages, soirées et occasions spéciales.",
             icon: "👰",
             price: 120,
             features: ["Consultation", "Essai", "Coiffure finale"],
             category: "Événement"
+          },
+          {
+            id: 6,
+            name: "Coupe Homme",
+            description: "Coupes précises et modernes pour hommes avec finition soignée.",
+            icon: "✂️",
+            price: 30,
+            features: ["Shampooing", "Coupe précise", "Finition"],
+            category: "Coupe"
+          },
+          {
+            id: 7,
+            name: "Barber Shop - Coupe Classique",
+            description: "Coupe traditionnelle de barbier avec rasage à la lame pour une finition parfaite.",
+            icon: "🪒",
+            price: 35,
+            features: ["Coupe précise", "Rasage nuque", "Soins après rasage"],
+            category: "Barber"
+          },
+          {
+            id: 8,
+            name: "Barber Shop - Coupe + Barbe",
+            description: "Service complet barbier : coupe de cheveux et entretien de la barbe.",
+            icon: "🪒",
+            price: 55,
+            features: ["Coupe cheveux", "Taille barbe", "Contour barbe", "Huile à barbe"],
+            category: "Barber"
+          },
+          {
+            id: 9,
+            name: "Barber Shop - Rasage Traditionnel",
+            description: "Rasage complet à la lame chaude avec serviette chaude et soins premium.",
+            icon: "🪒",
+            price: 40,
+            features: ["Préparation peau", "Rasage à la lame", "Serviette chaude", "Baume apaisant"],
+            category: "Barber"
+          },
+          {
+            id: 10,
+            name: "Barber Shop - Soins Barbe",
+            description: "Entretien complet de la barbe avec produits professionnels.",
+            icon: "🪒",
+            price: 25,
+            features: ["Nettoyage", "Taille", "Contour", "Huile nourrissante"],
+            category: "Barber"
           }
         ];
       }
@@ -146,5 +147,21 @@ export class HomeComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  getWomenServices(): Service[] {
+    return this.services.filter(service => 
+      (service.category === 'Coupe' && !service.name.toLowerCase().includes('homme')) || 
+      service.category === 'Coloration' || 
+      service.category === 'Soins' || 
+      service.category === 'Événement'
+    );
+  }
+
+  getMenServices(): Service[] {
+    return this.services.filter(service => 
+      service.category === 'Barber' || 
+      service.name.toLowerCase().includes('homme')
+    );
   }
 }
