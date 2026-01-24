@@ -48,8 +48,12 @@
   <div class="container">
     <h2 class="section-title">Notre Galerie</h2>
     <div class="gallery-grid">
-      <div *ngFor="let image of galleryImages" class="gallery-item">
-        <img [src]="image" [alt]="'Coiffure professionnelle'" loading="lazy">
+      <div *ngFor="let image of galleryImages; let i = index" class="gallery-item">
+        <img [src]="image" 
+             [alt]="'Coiffure professionnelle'" 
+             [style.object-position]="i === 1 ? 'top 30% left 20%' : i === 5 ? 'top 5% center' : 'center'"
+             [style.object-fit]="i === 5 ? 'cover' : 'cover'"
+             loading="lazy">
       </div>
     </div>
   </div>

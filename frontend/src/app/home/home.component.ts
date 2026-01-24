@@ -16,12 +16,13 @@ export class HomeComponent implements OnInit {
   loading = true;
 
   galleryImages = [
-    'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop&ixlib=rb-4.0.3',
-    'https://images.unsplash.com/photo-1562322145-93f6ab6b7b9b?w=400&h=300&fit=crop&ixlib=rb-4.0.3',
-    'https://images.unsplash.com/photo-1595358884362-c44b5e53c1e9?w=400&h=300&fit=crop&ixlib=rb-4.0.3',
-    'https://images.unsplash.com/photo-1580489944611-15a19d654956?w=400&h=300&fit=crop&ixlib=rb-4.0.3',
-    'https://images.unsplash.com/photo-1622279255856-3c064b6c8db6?w=400&h=300&fit=crop&ixlib=rb-4.0.3',
-    'https://images.unsplash.com/photo-1517874792473-2a02c1bef061?w=400&h=300&fit=crop&ixlib=rb-4.0.3'
+    // Images locales du dossier coiffure
+    '/assets/pexels-enginakyurt-3065096.jpg', // Coiffure homme
+    '/assets/pexels-anthonyshkraba-production-8973500.jpg',
+    '/assets/pexels-cottonbro-3998413.jpg',
+    '/assets/pexels-maksgelatin-4422102.jpg', // Image avec cheveux violets
+    '/assets/pexels-orione-conceicao-1531154-3014937.jpg',
+    '/assets/pexels-ralph-rabago-3290886.jpg' // Nouvelle image ajoutée
   ];
 
   constructor(
