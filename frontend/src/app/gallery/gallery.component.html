@@ -1,0 +1,10 @@
+<section id="galerie" class="gallery">
+  <div class="container">
+    <h2 class="section-title">Notre Galerie</h2>
+    <div class="gallery-grid">
+      <div *ngFor="let image of galleryImages" class="gallery-item">
+        <img [src]="image" [alt]="'Coiffure professionnelle'" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>

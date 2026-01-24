@@ -1,0 +1,21 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <h1>Élégance</h1>
+      </div>
+      <ul class="nav-menu" [class.active]="isMenuOpen">
+        <li><a (click)="scrollToSection('accueil')">Accueil</a></li>
+        <li><a (click)="scrollToSection('services')">Services</a></li>
+        <li><a (click)="scrollToSection('galerie')">Galerie</a></li>
+        <li><a (click)="scrollToSection('tarifs')">Tarifs</a></li>
+        <li><a (click)="scrollToSection('contact')">Contact</a></li>
+      </ul>
+      <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</header>

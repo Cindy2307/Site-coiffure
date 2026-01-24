@@ -1,0 +1,83 @@
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contact & Rendez-vous</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Nos Coordonnées</h3>
+        <div class="info-item">
+          <strong>Adresse:</strong><br>
+          123 Rue de la Beauté<br>
+          75001 Paris
+        </div>
+        <div class="info-item">
+          <strong>Téléphone:</strong><br>
+          01 23 45 67 89
+        </div>
+        <div class="info-item">
+          <strong>Horaires:</strong><br>
+          Mardi - Samedi: 9h-19h<br>
+          Dimanche: 9h-13h<br>
+          Lundi: Fermé
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Prendre Rendez-vous</h3>
+        
+        <div *ngIf="success" class="success-message">
+          {{ success }}
+        </div>
+        
+        <div *ngIf="error" class="error-message">
+          {{ error }}
+        </div>
+        
+        <form *ngIf="!submitted" (ngSubmit)="onSubmit()">
+          <input 
+            type="text" 
+            placeholder="Votre nom" 
+            [(ngModel)]="appointment.name" 
+            name="name" 
+            required
+          >
+          <input 
+            type="email" 
+            placeholder="Votre email" 
+            [(ngModel)]="appointment.email" 
+            name="email" 
+            required
+          >
+          <input 
+            type="tel" 
+            placeholder="Votre téléphone" 
+            [(ngModel)]="appointment.phone" 
+            name="phone" 
+            required
+          >
+          <select 
+            [(ngModel)]="appointment.serviceType" 
+            name="serviceType" 
+            required
+          >
+            <option value="">Choisir un service</option>
+            <option *ngFor="let service of services" [value]="service.name">
+              {{ service.name }}
+            </option>
+          </select>
+          <textarea 
+            placeholder="Message optionnel" 
+            rows="4" 
+            [(ngModel)]="appointment.message" 
+            name="message"
+          ></textarea>
+          <button 
+            type="submit" 
+            class="submit-btn" 
+            [disabled]="loading"
+          >
+            {{ loading ? 'Envoi en cours...' : 'Envoyer la demande' }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
